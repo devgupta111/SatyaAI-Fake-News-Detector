@@ -87,14 +87,15 @@ Given a claim in **English, Hindi, or Hinglish**, the system:
 
 ### Model Performance on Test Set
 
-| Model | Accuracy | F1 Score (Weighted) |
-|-------|----------|---------------------|
-| Logistic Regression (TF-IDF) | 67.5% | 67.0% |
-| SVM — LinearSVC (TF-IDF) | 70.2% | 70.0% |
-| **XLM-RoBERTa (Transformer)** | **78.4%** | **78.1%** |
-| **Ensemble (LR + SVM + XLMR)** | **82.7%** | **82.3%** |
+| Model | Accuracy | F1 Score (Weighted) | AUC (Macro) |
+|-------|----------|---------------------|-------------|
+| Logistic Regression (TF-IDF) | 67.5% | 67.2% | 0.854 |
+| SVM — LinearSVC (TF-IDF) | 68.0% | 67.3% | 0.852 |
+| **XLM-RoBERTa (Transformer)** | **71.1%** | **71.3%** | **0.877** |
+| Ensemble (LR + SVM + XLMR) | 69.5% | 69.4% | 0.891 |
 
-> XLM-RoBERTa improves accuracy by **+15.2%** over the baseline Logistic Regression model.
+> XLM-RoBERTa achieves the best single-model accuracy (+3.6% over LR baseline).
+> Ensemble achieves the highest AUC score of **0.891**.
 
 ### Dataset Distribution
 
