@@ -1,0 +1,47 @@
+# ── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Environment & Secrets ──────────────────────────────────────
+.env
+.streamlit/secrets.toml
+secrets.toml
+venv/
+.venv/
+env/
+
+# ── Jupyter / Colab ────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+nb_dump.txt
+
+# ── Large model files (stored on Google Drive) ─────────────────
+*.npy
+*.pt
+*.bin
+*.safetensors
+models/
+models/*.pkl
+
+# ── Auto-generated data (recreated during training) ───────────
+data/processed/
+data/data/
+
+# ── Duplicate / unnecessary formats ───────────────────────────
+*.xlsx
+
+# ── Private / sensitive folders ───────────────────────────────
+report/
+logs/
+downloaded/
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
