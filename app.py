@@ -25,15 +25,18 @@ st.caption("Cross-Lingual RAG-Based Fact-Checking System for Regional and Code-M
 # ═══════════════════════════════════════════════════════════════
 # LOAD MODELS
 # ═══════════════════════════════════════════════════════════════
-MODELS_DIR = os.path.join(os.path.dirname(__file__), "models")
+MODELS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
 
 @st.cache_resource
 def load_models():
     def load_pkl(path):
-        if os.path.exists(path):
-            with open(path, "rb") as f:
-                return pickle.load(f)
-        return None
+        try:
+            if os.path.exists(path):
+                with open(path, "rb") as f:
+                    return pickle.load(f)
+            return None
+        except Exception:
+            return None
 
     tfidf_path = (
         os.path.join(MODELS_DIR, "tfidf_v2.pkl")
@@ -64,6 +67,15 @@ def load_xlmr_backbone():
 
 
 tfidf, model_lr, model_svm, model_xlmr = load_models()
+
+# ── Debug: show model load status in sidebar ───────────────────
+if tfidf is None:
+    st.error(
+        f"❌ **Models not found!**\n\n"
+        f"Looking in: `{MODELS_DIR}`\n\n"
+        f"Files found: `{os.listdir(MODELS_DIR) if os.path.exists(MODELS_DIR) else 'FOLDER MISSING'}`"
+    )
+    st.stop()
 
 # ═══════════════════════════════════════════════════════════════
 # SESSION STATE
