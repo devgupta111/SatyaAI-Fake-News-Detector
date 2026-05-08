@@ -21,13 +21,11 @@ env/
 *.ipynb_checkpoints
 nb_dump.txt
 
-# ── Large model files (stored on Google Drive) ─────────────────
+# ── Large embedding files only (pkl models ARE uploaded) ─────────
 *.npy
 *.pt
 *.bin
 *.safetensors
-models/
-models/*.pkl
 
 # ── Auto-generated data (recreated during training) ───────────
 data/processed/
