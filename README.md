@@ -10,7 +10,7 @@
 **Cross-Lingual RAG-Based Fact-Checking System**
 *Supports English, Hindi, and Hinglish claims*
 
-[🚀 Live Demo](https://satyaai.streamlit.app) &nbsp;|&nbsp; [📓 Training Notebook](notebooks/) &nbsp;|&nbsp; [📊 Results](#-results)
+[🚀 Live Demo](https://satya-ai-fake-news-detector-by-dev-gupta.streamlit.app/) &nbsp;|&nbsp; [📓 Training Notebook](notebooks/) &nbsp;|&nbsp; [📊 Results](#-results)
 
 </div>
 
