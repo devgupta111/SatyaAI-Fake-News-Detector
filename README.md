@@ -97,13 +97,17 @@ Given a claim in **English, Hindi, or Hinglish**, the system:
 > XLM-RoBERTa achieves the best single-model accuracy (+3.6% over LR baseline).
 > Ensemble achieves the highest AUC score of **0.891**.
 
-### Dataset Distribution
+### Dataset Details
+
+**Total rows: 1,311** | **Columns: `claim`, `label`, `language`, `source`, `url`**
 
 | Label | Count | % |
 |-------|-------|---|
-| MISLEADING | 337 | 44.3% |
-| FALSE | 236 | 31.0% |
-| TRUE | 187 | 24.6% |
+| MISLEADING | 569 | 43.4% |
+| FALSE | 426 | 32.5% |
+| TRUE | 316 | 24.1% |
+
+> Data scraped from 5 Indian fact-checking platforms: AltNews, BoomLive, Factly, India Today, Vishvas News.
 
 ---
 
@@ -202,8 +206,8 @@ The full model training pipeline is in [`notebooks/Satya_AI.ipynb`](notebooks/Sa
 
 ## 👤 Author
 
-**[Your Name]**  
-B.Tech Computer Science | NLP Project — 2025  
+**Dev Gupta**  
+B.Tech CSE — Data Science & AI | BML Munjal University | 2023–2027  
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/devgupta111)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/devgupta111)
